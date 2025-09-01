@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Types of Melodies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient 3s ease-in-out infinite;
+        }
+
+        @keyframes gradient {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(90deg); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            background: linear-gradient(45deg, #ffd700, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* YouTube Shorts Grid */
+        .shorts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .short-container {
+            display: flex;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .short-container:hover {
+            transform: scale(1.05);
+        }
+
+        .youtube-short {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .youtube-short:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Instructions Section */
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .instructions h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .instructions ol {
+            margin-left: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        .code-example {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        /* Pulse animation for play button */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .shorts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Loading placeholder */
+        .placeholder-short {
+            width: 315px;
+            height: 560px;
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.3), rgba(78, 205, 196, 0.3));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+        }
+
+        .placeholder-short h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .placeholder-short p {
+            opacity: 0.8;
+            max-width: 250px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">All Typse of Melodies</h1>
+            <p class="subtitle">Your YouTube Shorts Collection</p>
+        </div>
+
+        <!-- YouTube Shorts Grid -->
+        <div class="shorts-grid">
+            <!-- Your First YouTube Short -->
+            <div class="short-container">
+                <iframe class="youtube-short" 
+                    width="315" 
+                    height="560" 
+                    src="https://www.youtube.com/embed/OSztejfrTZA?rel=0&modestbranding=1&playsinline=1" 
+                    title="YouTube Short"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Alternative: Click to Watch -->
+            <div class="short-container">
+                <div class="video-thumbnail" onclick="openVideo('OSztejfrTZA')">
+                    <div style="width: 315px; height: 560px; background: linear-gradient(135deg, #ff6b6b, #4ecdc4); display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 15px; cursor: pointer; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://img.youtube.com/vi/OSztejfrTZA/maxresdefault.jpg') center/cover;"></div>
+                        <div style="position: relative; z-index: 2; background: rgba(0,0,0,0.7); padding: 20px; border-radius: 10px; text-align: center;">
+                            <div style="font-size: 60px; margin-bottom: 10px;">▶️</div>
+                            <h4 style="color: white; margin-bottom: 10px;">Watch on YouTube</h4>
+                            <p style="color: #ccc; font-size: 14px;">Click to open your Short</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Short 3 - Replace with your video ID -->
+            <div class="short-container">
+                <div class="placeholder-short">
+                    <h4>🎼 Your Short #3</h4>
+                    <p>Copy and paste more sections to add more Shorts</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>🎬 How to Add Your YouTube Shorts:</h3>
+            <ol>
+                <li><strong>Go to your YouTube channel:</strong> https://youtube.com/@yaminitharite-r4h</li>
+                <li><strong>Find a Short you want to add</strong> and click on it</li>
+                <li><strong>Copy the video ID</strong> from the URL:
+                    <div class="code-example">
+                        From: https://www.youtube.com/shorts/ABC123XYZ<br>
+                        Video ID: ABC123XYZ
+                    </div>
+                </li>
+                <li><strong>Replace the placeholder</strong> with this code:
+                    <div class="code-example">
+&lt;div class="short-container"&gt;<br>
+&nbsp;&nbsp;&lt;iframe class="youtube-short" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;width="315" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;height="560" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;src="https://www.youtube.com/embed/YOUR_VIDEO_ID" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;frameborder="0" <br>
+&nbsp;&nbsp;&nbsp;&nbsp;allowfullscreen&gt;<br>
+&nbsp;&nbsp;&lt;/iframe&gt;<br>
+&lt;/div&gt;
+                    </div>
+                </li>
+                <li><strong>Replace "YOUR_VIDEO_ID"</strong> with your actual video ID</li>
+            </ol>
+
+            <p><strong>Example:</strong> If your Short URL is <code>https://www.youtube.com/shorts/dQw4w9WgXcQ</code>, then replace <code>YOUR_VIDEO_ID</code> with <code>dQw4w9WgXcQ</code></p>
+        </div>
+    </div>
+
+    <script>
+        // Open video in new tab
+        function openVideo(videoId) {
+            window.open(`https://www.youtube.com/shorts/${videoId}`, '_blank');
+        }
+
+        // Smooth entrance animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.short-container, .instructions');
+            
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
