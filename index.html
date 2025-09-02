@@ -166,10 +166,33 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="auth-buttons">
-    <button onclick="window.location.href='login.html'">Login</button>
-</div>
+    <style>
+    .auth-buttons {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.auth-buttons button {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    margin-left: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.5);
+    transition: background 0.4s ease, transform 0.2s ease;
+    min-width: 110px;
+}
+
+.auth-buttons button:hover {
+    background: linear-gradient(45deg, #4ecdc4, #ff6b6b);
+    transform: scale(1.05);
+}
+        </style>
+
         <div class="header">
             <h1 class="main-title">All Types of Melodies</h1>
             <p class="subtitle">Your YouTube Shorts Collection</p>
