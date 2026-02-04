@@ -1,160 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login - All Types of Melodies</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Login page for All Types of Melodies by Yamini Tharite">
-    <meta name="author" content="Yamini Tharite">
+    <meta charset="UTF-8">
+    <title>Login | All Types of Melodies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
         }
 
         .login-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             width: 350px;
-            backdrop-filter: blur(10px);
+            border-radius: 16px;
             text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            color: white;
         }
 
-        .login-card h2 {
-            margin-bottom: 24px;
-            font-weight: 700;
-            font-size: 1.8rem;
+        h2 {
+            margin-bottom: 25px;
             color: #ffd700;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
         }
 
         input {
-            padding: 14px 15px;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
             border: none;
             border-radius: 10px;
             font-size: 1rem;
             outline: none;
-            color: #333;
-        }
-
-        input:focus {
-            box-shadow: 0 0 8px #4ecdc4;
         }
 
         button {
+            width: 100%;
             padding: 14px;
+            background: #4ecdc4;
             border: none;
             border-radius: 10px;
-            background: #4ecdc4;
-            color: #fff;
-            font-weight: 700;
             font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 12px rgba(78, 205, 196, 0.6);
         }
 
         button:hover {
             background: #45b7d1;
-            transform: translateY(-2px);
         }
 
-        .forgot-password {
-            margin-top: 12px;
+        .forgot {
+            margin-top: 15px;
             font-size: 0.9rem;
             color: #ffd700;
             cursor: pointer;
-            text-decoration: underline;
-        }
-
-        .forgot-password:hover {
-            color: #fff;
-        }
-
-        .back-home {
-            margin-top: 18px;
-        }
-
-        .back-home a {
-            color: #4ecdc4;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .back-home a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 400px) {
-            .login-card {
-                width: 90%;
-                padding: 30px 20px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="login-card">
-        <h2>Login to Your Account</h2>
+<div class="login-card">
+    <h2>Login</h2>
 
-        <!-- FORM -->
-        <form onsubmit="event.preventDefault(); loginUser();">
-            <input
-                type="email"
-                placeholder="Email address"
-                aria-label="Email address"
-                required
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                aria-label="Password"
-                required
-            />
-            <button type="submit">Login</button>
-        </form>
+    <form onsubmit="loginUser(event)">
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="password" id="password" placeholder="Password (min 6 chars)" required>
+        <button type="submit">Login</button>
+    </form>
 
-        <!-- Forgot password -->
-        <p class="forgot-password" onclick="forgotPassword()">
-            Forgot Password?
-        </p>
-
-        <!-- Back to home -->
-        <div class="back-home">
-            <a href="index.html">← Back to Home</a>
-        </div>
+    <div class="forgot" onclick="alert('Forgot password feature coming soon')">
+        Forgot password?
     </div>
+</div>
 
-    <script>
-        function loginUser() {
-            // Demo login (GitHub Pages safe)
-            setTimeout(() => {
-                window.location.href = "success.html";
-            }, 700);
-        }
+<script>
+function loginUser(event) {
+    event.preventDefault();
 
-        function forgotPassword() {
-            alert("🔒 Password reset feature coming soon!");
-        }
-    </script>
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    // validations
+    if (email === "" || password === "") {
+        alert("All fields are required");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+    }
+
+    // success → go to home page
+    window.location.href = "home.html";
+}
+</script>
 
 </body>
 </html>
+
+            
+
+        
