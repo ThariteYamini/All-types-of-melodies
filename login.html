@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Login - All Types of Melodies</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Login page for All Types of Melodies by Yamini Tharite">
+    <meta name="author" content="Yamini Tharite">
+
     <style>
-        /* Background gradient */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +21,6 @@
             color: #fff;
         }
 
-        /* Card container */
         .login-card {
             background: rgba(255, 255, 255, 0.1);
             padding: 40px 30px;
@@ -28,39 +31,33 @@
             text-align: center;
         }
 
-        /* Title */
         .login-card h2 {
             margin-bottom: 24px;
             font-weight: 700;
             font-size: 1.8rem;
-            color: #ffd700; /* gold */
+            color: #ffd700;
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
         }
 
-        /* Form */
         form {
             display: flex;
             flex-direction: column;
             gap: 18px;
         }
 
-        input[type="email"],
-        input[type="password"] {
+        input {
             padding: 14px 15px;
             border: none;
             border-radius: 10px;
             font-size: 1rem;
             outline: none;
-            transition: box-shadow 0.3s ease;
             color: #333;
         }
 
-        input[type="email"]:focus,
-        input[type="password"]:focus {
+        input:focus {
             box-shadow: 0 0 8px #4ecdc4;
         }
 
-        /* Submit button */
         button {
             padding: 14px;
             border: none;
@@ -79,7 +76,6 @@
             transform: translateY(-2px);
         }
 
-        /* Forgot password link */
         .forgot-password {
             margin-top: 12px;
             font-size: 0.9rem;
@@ -92,7 +88,20 @@
             color: #fff;
         }
 
-        /* Responsive */
+        .back-home {
+            margin-top: 18px;
+        }
+
+        .back-home a {
+            color: #4ecdc4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-home a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 400px) {
             .login-card {
                 width: 90%;
@@ -102,14 +111,50 @@
     </style>
 </head>
 <body>
+
     <div class="login-card">
         <h2>Login to Your Account</h2>
-        <form>
-            <input type="email" placeholder="Email address" required />
-            <input type="password" placeholder="Password" required />
+
+        <!-- FORM -->
+        <form onsubmit="event.preventDefault(); loginUser();">
+            <input
+                type="email"
+                placeholder="Email address"
+                aria-label="Email address"
+                required
+            />
+            <input
+                type="password"
+                placeholder="Password"
+                aria-label="Password"
+                required
+            />
             <button type="submit">Login</button>
         </form>
-        <p class="forgot-password">Forgot Password?</p>
+
+        <!-- Forgot password -->
+        <p class="forgot-password" onclick="forgotPassword()">
+            Forgot Password?
+        </p>
+
+        <!-- Back to home -->
+        <div class="back-home">
+            <a href="index.html">← Back to Home</a>
+        </div>
     </div>
+
+    <script>
+        function loginUser() {
+            // Demo login (GitHub Pages safe)
+            setTimeout(() => {
+                window.location.href = "success.html";
+            }, 700);
+        }
+
+        function forgotPassword() {
+            alert("🔒 Password reset feature coming soon!");
+        }
+    </script>
+
 </body>
 </html>
