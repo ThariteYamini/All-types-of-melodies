@@ -1,3 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | All Types of Melodies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px 30px;
+            width: 350px;
+            border-radius: 16px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            color: #ffd700;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #4ecdc4;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45b7d1;
+        }
+
+        .forgot {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #ffd700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+    <h2>Login</h2>
+
+    <form onsubmit="loginUser(event)">
+        <input type="email" id="email" placeholder="Email address" required>
+        <input type="password" id="password" placeholder="Password (min 6 chars)" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="forgot" onclick="alert('Forgot password feature coming soon')">
+        Forgot password?
+    </div>
+</div>
+
+<script>
 function loginUser(event) {
     event.preventDefault();
 
@@ -21,7 +106,7 @@ function loginUser(event) {
 </script>
 
 </body>
+</html>
 
-
-
-       
+            
+    
