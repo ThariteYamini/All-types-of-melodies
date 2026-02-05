@@ -1,136 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>MMM – Music • Mantra • Messages</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Successful 🎉</title>
 
-<style>
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-    color:white;
-    scroll-behavior:smooth;
-}
+    <meta name="description" content="Login success page - All Types of Melodies" />
+    <meta name="author" content="Yamini Tharite" />
 
-/* HEADER */
-header{
-    text-align:center;
-    padding:60px 20px;
-}
-header h1{
-    font-size:3.5rem;
-    color:#ffd700;
-}
-header p{
-    font-size:1.2rem;
-    opacity:0.9;
-}
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
 
-/* PERSONAL MESSAGE */
-#welcome{
-    margin-top:20px;
-    font-size:1.1rem;
-    color:#4ecdc4;
-}
+        .success-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            padding: 50px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            max-width: 400px;
+            animation: pop 0.6s ease;
+        }
 
-/* SECTIONS */
-section{
-    padding:80px 20px;
-    text-align:center;
-    animation: fadeUp 1s ease forwards;
-}
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
 
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
-}
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+        }
 
-/* CHAKRA COLORS */
-.music{background:rgba(0,136,255,0.15);}
-.mantra{background:rgba(160,32,240,0.15);}
-.message{background:rgba(255,215,0,0.15);}
-.shorts{background:rgba(255,105,180,0.15);}
+        p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
 
-section h2{
-    font-size:2.3rem;
-    margin-bottom:20px;
-}
+        a {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.6);
+        }
 
-/* VIDEOS */
-iframe{
-    width:90%;
-    max-width:900px;
-    height:480px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* SHORTS */
-.shorts iframe{
-    width:280px;
-    height:500px;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:40px;
-    opacity:0.7;
-}
-</style>
+        a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.8);
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>MMM</h1>
-    <p>Music • Mantra Healing • Messages</p>
-    <div id="welcome"></div>
-</header>
+    <div class="success-card">
+        <h1>🎉 Login Successful!</h1>
+        <p>Welcome to <strong>All Types of Melodies</strong><br>
+        Enjoy your favorite YouTube Shorts 🎶</p>
 
-<!-- MUSIC -->
-<section class="music">
-    <h2>🎵 Music Healing</h2>
-    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MUSIC_PLAYLIST_ID"
-    allowfullscreen></iframe>
-</section>
-
-<!-- MANTRA -->
-<section class="mantra">
-    <h2>🕉️ Mantra Healing</h2>
-    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MANTRA_PLAYLIST_ID"
-    allowfullscreen></iframe>
-</section>
-
-<!-- MESSAGES -->
-<section class="message">
-    <h2>💌 Messages from Universe</h2>
-    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MESSAGE_PLAYLIST_ID"
-    allowfullscreen></iframe>
-</section>
-
-<!-- SHORTS -->
-<section class="shorts">
-    <h2>⚡ Healing Shorts</h2>
-    <iframe src="https://www.youtube.com/embed/SHORT_VIDEO_ID"></iframe>
-</section>
-
-<footer>
-    ✨ MMM © 2026 | Heal • Listen • Receive
-</footer>
-
-<script>
-// DEMO LOGIN MESSAGE
-const user = "Yamini"; // backend later
-document.getElementById("welcome").innerText =
-`Welcome back, ${user} 🌸 The universe has a message for you today.`;
-</script>
+        <a href="index.html">Go to Home</a>
+    </div>
 
 </body>
 </html>
-
-
-
-    
