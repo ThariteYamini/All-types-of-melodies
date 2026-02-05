@@ -194,7 +194,6 @@
         </style>
     <div class="auth-buttons">
         <button onclick="window.location.href='login.html'">Login</button>
-
     </div>
     <div class="header">
             <h1 class="main-title">All Types of Melodies</h1>
@@ -405,7 +404,41 @@
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
-            </iframe>
-             </div>
+        </iframe>
+    </div>
+             <div class="short-container">
+        <iframe class="youtube-short" 
+            width="315" 
+            height="560" 
+            src="https://www.youtube.com/embed/lw8xFiC1-QE"
+            title="YouTube Short"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <script>
+        // Open video in new tab
+        function openVideo(videoId) {
+            window.open(`https://www.youtube.com/shorts/${videoId}`, '_blank');
+        }
+
+        // Smooth entrance animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.short-container, .instructions');
+            
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
 </body>
 </html>
