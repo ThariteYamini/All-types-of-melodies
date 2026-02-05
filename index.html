@@ -1,105 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login | All Types of Melodies</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>MMM – Music • Mantra • Messages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    scroll-behavior:smooth;
+}
 
-        .login-card {
-            background: rgba(255,255,255,0.15);
-            padding: 40px 30px;
-            border-radius: 16px;
-            width: 350px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            color: #fff;
-        }
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+header h1{
+    font-size:3.5rem;
+    color:#ffd700;
+}
+header p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
 
-        h2 {
-            color: #ffd700;
-            margin-bottom: 25px;
-        }
+/* PERSONAL MESSAGE */
+#welcome{
+    margin-top:20px;
+    font-size:1.1rem;
+    color:#4ecdc4;
+}
 
-        input {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-        }
+/* SECTIONS */
+section{
+    padding:80px 20px;
+    text-align:center;
+    animation: fadeUp 1s ease forwards;
+}
 
-        button {
-            width: 100%;
-            padding: 14px;
-            background: #4ecdc4;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #fff;
-            cursor: pointer;
-        }
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
 
-        button:hover {
-            background: #45b7d1;
-        }
+/* CHAKRA COLORS */
+.music{background:rgba(0,136,255,0.15);}
+.mantra{background:rgba(160,32,240,0.15);}
+.message{background:rgba(255,215,0,0.15);}
+.shorts{background:rgba(255,105,180,0.15);}
 
-        .forgot {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #ffd700;
-            cursor: pointer;
-        }
-    </style>
+section h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+}
+
+/* VIDEOS */
+iframe{
+    width:90%;
+    max-width:900px;
+    height:480px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* SHORTS */
+.shorts iframe{
+    width:280px;
+    height:500px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.7;
+}
+</style>
 </head>
+
 <body>
 
-<div class="login-card">
-    <h2>Login</h2>
+<header>
+    <h1>MMM</h1>
+    <p>Music • Mantra Healing • Messages</p>
+    <div id="welcome"></div>
+</header>
 
-    <form onsubmit="event.preventDefault(); loginUser();">
-        <input type="email" id="email" placeholder="Email address" required>
-        <input type="password" id="password" placeholder="Password" minlength="6" required>
-        <button type="submit">Login</button>
-    </form>
+<!-- MUSIC -->
+<section class="music">
+    <h2>🎵 Music Healing</h2>
+    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MUSIC_PLAYLIST_ID"
+    allowfullscreen></iframe>
+</section>
 
-    <div class="forgot" onclick="alert('Password reset coming soon')">
-        Forgot password?
-    </div>
-</div>
+<!-- MANTRA -->
+<section class="mantra">
+    <h2>🕉️ Mantra Healing</h2>
+    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MANTRA_PLAYLIST_ID"
+    allowfullscreen></iframe>
+</section>
+
+<!-- MESSAGES -->
+<section class="message">
+    <h2>💌 Messages from Universe</h2>
+    <iframe src="https://www.youtube.com/embed?listType=playlist&list=YOUR_MESSAGE_PLAYLIST_ID"
+    allowfullscreen></iframe>
+</section>
+
+<!-- SHORTS -->
+<section class="shorts">
+    <h2>⚡ Healing Shorts</h2>
+    <iframe src="https://www.youtube.com/embed/SHORT_VIDEO_ID"></iframe>
+</section>
+
+<footer>
+    ✨ MMM © 2026 | Heal • Listen • Receive
+</footer>
 
 <script>
-function loginUser() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-
-    if (!email || !password) {
-        alert("All fields are required");
-        return;
-    }
-
-    if (password.length < 6) {
-        alert("Password must be at least 6 characters");
-        return;
-    }
-
-    // login success
-    window.location.href = "home.html";
-}
+// DEMO LOGIN MESSAGE
+const user = "Yamini"; // backend later
+document.getElementById("welcome").innerText =
+`Welcome back, ${user} 🌸 The universe has a message for you today.`;
 </script>
 
 </body>
 </html>
+
+
+
+    
