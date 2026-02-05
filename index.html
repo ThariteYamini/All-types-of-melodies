@@ -194,6 +194,7 @@
         </style>
     <div class="auth-buttons">
         <button onclick="window.location.href='login.html'">Login</button>
+
     </div>
     <div class="header">
             <h1 class="main-title">All Types of Melodies</h1>
@@ -404,73 +405,7 @@
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
-        </iframe>
-    </div>
-             <div class="short-container">
-        <iframe class="youtube-short" 
-            width="315" 
-            height="560" 
-            src="https://www.youtube.com/embed/lw8xFiC1-QE"
-            title="YouTube Short"
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-    </div>
-            
-        <!-- Instructions -->
-        <div class="instructions">
-            <h3>🎬 How to Add Your YouTube Shorts:</h3>
-            <ol>
-                <li><strong>Go to your YouTube channel:</strong> https://youtube.com/@yaminitharite-r4h</li>
-                <li><strong>Find a Short you want to add</strong> and click on it</li>
-                <li><strong>Copy the video ID</strong> from the URL:
-                    <div class="code-example">
-                        From: https://www.youtube.com/shorts/ABC123XYZ<br>
-                        Video ID: ABC123XYZ
-                    </div>
-                </li>
-                <li><strong>Replace the placeholder</strong> with this code:
-                    <div class="code-example">
-&lt;div class="short-container"&gt;<br>
-&nbsp;&nbsp;&lt;iframe class="youtube-short" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;width="315" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;height="560" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;src="https://www.youtube.com/embed/YOUR_VIDEO_ID" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;frameborder="0" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;allowfullscreen&gt;<br>
-&nbsp;&nbsp;&lt;/iframe&gt;<br>
-&lt;/div&gt;
-                    </div>
-                </li>
-                <li><strong>Replace "YOUR_VIDEO_ID"</strong> with your actual video ID</li>
-            </ol>
-
-            <p><strong>Example:</strong> If your Short URL is <code>https://www.youtube.com/shorts/dQw4w9WgXcQ</code>, then replace <code>YOUR_VIDEO_ID</code> with <code>dQw4w9WgXcQ</code></p>
-        </div>
-    </div>
-
-    <script>
-        // Open video in new tab
-        function openVideo(videoId) {
-            window.open(`https://www.youtube.com/shorts/${videoId}`, '_blank');
-        }
-
-        // Smooth entrance animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.short-container, .instructions');
-            
-            elements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(50px)';
-                
-                setTimeout(() => {
-                    el.style.transition = 'all 0.6s ease';
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
-        });
-    </script>
+            </iframe>
+             </div>
 </body>
 </html>
